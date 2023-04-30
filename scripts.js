@@ -46,8 +46,3 @@ const sacarinfo = (respuesta) =>{
 
 
 }
-
-localStorage = {
-    hola: "hola"
-}
-
