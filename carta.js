@@ -70,3 +70,34 @@ backButton.addEventListener('click', () => {
 });
 
 CargarDatosPokemon();
+
+
+
+
+
+document.getElementById('favoritos').addEventListener('click',function(e) {
+    
+  e.preventDefault();
+  const data2 = JSON.parse(localStorage.getItem('pokemonData'));
+
+  let informacion = new FormData();
+
+  informacion.append('name', data2.name);
+  informacion.append('id', data2.id);
+
+
+  fetch('data.php' , {
+      method: 'POST',
+      body: informacion
+  })
+  .then(res => res.json())
+  .then(data => {
+      if(data == 'true') {
+
+          alert('El pokemon se ingresó correctamente.');
+      } else {
+          console.log(data);
+      }
+  });
+
+});
