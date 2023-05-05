@@ -208,3 +208,32 @@ button[type="submit"]:hover {
 h1{
     color: white ;
 }
+
+.tablero{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 5px
+}
+
+h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    ;
+}
+
+.tabla{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,th{
+    
+    text-align: left;
+    padding: 8px;
+}
+
+tr{
+    border: 1px solid black;
+}

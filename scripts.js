@@ -1,5 +1,6 @@
 const id = document.querySelector("#pokemon-id-name");
 const button = document.getElementById('search-button');
+const fav = document.getElementById('ver_fav');
 
 button.addEventListener("click", (event) => {
   event.preventDefault();
@@ -26,4 +27,10 @@ button.addEventListener("click", (event) => {
       console.error('Error fetching data:', error);
       alert('No se pudo encontrar el Pokémon. Por favor, intenta de nuevo.');
     });
+});
+
+fav.addEventListener('click',() => {
+    
+  window.location.href = 'favorito.html';
+
 });
